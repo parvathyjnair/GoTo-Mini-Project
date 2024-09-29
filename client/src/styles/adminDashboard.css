@@ -1,0 +1,35 @@
+/* src/components/AdminDashboard.module.css */
+.drawerPaper {
+    width: 240px;
+    box-sizing: border-box;
+  }
+  
+  .appBar {
+    width: calc(100% - 240px);
+    margin-left: 240px;
+  }
+  
+  .drawer {
+    width: 240px;
+  }
+  
+  .drawerContainer {
+    overflow: auto;
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    padding: 24px;
+  }
+  
+  /* General page layout for content sections */
+  .toolbar {
+    min-height: 64px;
+  }
+  
+  /* Center-align the title in the app bar */
+  .appBarTitle {
+    flex-grow: 1;
+    text-align: center;
+  }
+  

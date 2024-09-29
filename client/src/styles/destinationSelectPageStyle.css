@@ -1,0 +1,172 @@
+.dest-sel-card{
+
+  background-color: var(--alt-bg);
+  width:max-content;
+  /* min-width: 40rem; */
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  max-width: 75%;
+  min-width: fit-content;
+}
+
+.date-time{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  /* margin: auto; */
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+/* .dir-select{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  gap: 1rem;
+} */
+
+.drop-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.destination-selector-button {
+  /* color: white; */
+  background-color: var(--bg);
+  /* backdrop-filter: blur(10px); */
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 15px;
+  width: 25ch;
+  transition: 250ms ease-in-out;
+  color: var(--text);
+  text-align: center;
+}
+
+.dropdown.active > .destination-selector-button,
+.destination-selector-button:hover {
+  filter: brightness(1.1);
+}
+
+
+.dropdown {
+  position: relative;
+  font-size: large;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  background-color: var(--bg);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  /* box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1); */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 150ms ease-in-out;
+  border-radius: 10px;
+}
+
+.dropdown.active > .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 100;
+}
+
+.dropdown-cities {
+  display: flex;
+  flex-direction: column;
+  border: var(--alt-bg) 1px solid;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  /* background-color: transparent; */
+}
+
+.dropdown-item {
+  /* color: white; */
+  background-color: transparent;
+  border: none;
+  /* border-radius: 10px; */
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  /* transition: background-color 250ms ease-in-out; */
+}
+
+.dropdown-item:hover {
+  background-color: var(--secondary);
+  transform: scale(1);
+}
+
+.search-btn {
+  font-size: large;
+  font-weight: bold;
+  background-color: var(--primary);
+  /* backdrop-filter: blur(5px); */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: inherit;
+  color: var(--bg);
+  cursor: pointer;
+  padding: 5px 20px;
+  /* transition: background-color 150ms ease-in-out, border-radius 150ms ease-in-out; */
+  height: 40px;
+  
+  /* margin: 0 auto; */
+  /* width: 25%;*/
+}
+
+/* .search-btn:hover{
+  border-radius: 20px;
+  background-color: rgba(100, 150, 255, 0.9);
+} */
+
+.icon-ip{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-ip > *:first-child{
+  margin-right: 0.5rem;
+}
+
+/* #myCheckbox{
+  width: 15px;
+  height: 15px;
+  display: none;
+} */
+
+.checkbox-frame{
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 3px;
+}
+
+/* #to #from{
+  width: 15px;
+  height: 15px;
+  margin: 4px 4px 3px 4px;
+} */

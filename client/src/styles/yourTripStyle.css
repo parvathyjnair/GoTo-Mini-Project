@@ -1,0 +1,85 @@
+.dest{
+    width: 11ch;
+    overflow: hidden;
+    text-align: left;
+}
+
+.tripDate{
+  width:10ch;
+}
+
+.tripTime{
+  width: 5ch;
+}
+
+.trip {
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin: auto;
+  padding: 1rem 0.5rem;
+  /* color: white; */
+  /* background-color: #3c3c3c82; */
+  border-radius: 5px;
+  max-width: 96%;
+  
+  /* backdrop-filter: blur(3px); */
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upd-buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.upd-buttons > button{
+  width: fit-content;
+}
+
+.modal-head{
+  margin-bottom: 1.5rem;
+  font-size: large;
+}
+
+.view, .modify{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modify > button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.del-btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.view{
+  width: 90%;
+  justify-content: flex-start;
+  gap: 0.2rem;
+}
+
+.modify{
+  justify-content: flex-end;
+  gap: 0.7rem;
+  /* margin: 0 8px 0 5px; */
+}

@@ -1,0 +1,56 @@
+/* Toggle.css */
+.toggle {
+    width: 150px; /* Adjust width based on labels */
+    height: 30px;
+    background-color: var(--secondary);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+  
+  .toggle.active  {
+    background-color: var(--accent);
+    color: var(--bg);
+  }
+
+  .toggle.active > .toggle-handle{
+    background-color: var(--bg);
+  }
+  
+  .toggle-handle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--text);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle.active .toggle-handle {
+    transform: translateX(120px) translateY(-50%); /* Adjust translateX based on labels and toggle width */
+    right: 5px;
+  }
+  
+  .toggle-label {
+    position: absolute;
+    text-align: center;
+    /* color: var(--text); */
+  }
+
+  .toggle-left{
+    left: 1.8rem;
+    /* margin-left: 0.6rem; */
+  }
+
+  .toggle-right{
+    right: 1.8rem;
+    
+  }
+  
