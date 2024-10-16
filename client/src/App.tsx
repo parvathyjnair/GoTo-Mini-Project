@@ -22,6 +22,8 @@ import { useToast } from './utils/ToastContext';
 import Footer from './components/Footer';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import RecommendingUsers  from './Pages/RecommendingUsers';
+import ChatPage from './Pages/ChatPage';
+import { log } from 'console';
 
 const theme = createTheme({
   palette: {
@@ -85,12 +87,15 @@ const App: React.FC = () => {
   //
 
   const profileCache = localStorage.getItem('profile');
+  console.log(profileCache);
+  
   const cookies = new Cookies();
 
   if(!!profileCache && !isLogged && cookies.get('dummy_jwt_auth_token')) {
     setIsLogged(true);
     setProfile(JSON.parse(profileCache));
   }
+console.log(profile?.name);
 
   const handleLoginSuccess = async (credentialResponse: CredentialResponse)=>{
     if(credentialResponse.credential){
@@ -135,6 +140,7 @@ const App: React.FC = () => {
           <Route path="/home" element={<HomePage name={profile?.name || ""}/>}/>
           <Route path="/selectDestination" element={<DestinationSelect profile={profile}/>}/>
           <Route path="/showCompanions/:destination/:date/:time/:dir" element={<ShowCompanions email={profile?.email || ""} name={profile?.name || ""} />}/>
+          <Route path="/chat" element={<ChatPage />}/>
           {/* <Route path="/serverOffline" element={<InfoCard content="Unable to connect to the server :_(" />}/> */}
         </Route>
       }

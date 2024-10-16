@@ -47,7 +47,7 @@ router.get("/", async (req, res) => {
 
     results.push({
       _id: trip._id,
-      name: user.name,
+      name: trip.name,
       email: trip.email,
       ph_no: user.ph_no,
       wa_no: user.wa_no,
@@ -96,7 +96,8 @@ router.post("/", async (req, res) => {
     "email": email,
     "destination": destination,
     "date": date,
-    "dir": dir
+    "dir": dir,
+    "name":name
   });
   if(existingTravelDetail)  return res.status(208).send(existingTravelDetail);
   let newTravelDetail = {
@@ -104,7 +105,8 @@ router.post("/", async (req, res) => {
     "time": time,
     "destination": destination,
     "date": date,
-    "dir": dir
+    "dir": dir,
+    "name":name
   };
   let result = await tripsCollection.insertOne(newTravelDetail);
 

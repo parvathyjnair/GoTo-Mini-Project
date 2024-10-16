@@ -54,10 +54,10 @@ router.post("/", async (req, res) => {
     const hasUserAdminPrivelage = isUserPresent ? isUserPresent.is_admin :  false// if user is present in UserDirectory, then check if that user has admin role.
     let newUser = {
       "email": email,
-      "name": req.body.name,
+      "name": userData.name || userData.given_name,
       "ph_no": "",
       "wa_no": "",
-      "avatar": req.body.avatar,
+      "avatar": userData.picture,
       "isAdmin": hasUserAdminPrivelage ,
       "isCollegeMember" : isCollegeMemberFlag,
       "subObject": {}
