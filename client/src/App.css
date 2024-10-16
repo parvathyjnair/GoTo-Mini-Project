@@ -151,3 +151,6 @@
   .made a:hover {
     text-decoration: underline;
   }
+  .code{
+    color: red;
+  }
