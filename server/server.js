@@ -23,7 +23,7 @@ const app = express();
 app.use(cors({
   origin: [
      process.env.CLIENT_URL,
-    "https://goto-git-dev-shlok007s-projects.vercel.app"
+    "https://go-to-mini-project.vercel.app"
   ], 
   credentials: true
 }));
