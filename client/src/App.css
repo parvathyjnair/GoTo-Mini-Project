@@ -7,12 +7,13 @@
     color: #3924a3;
   }
   .create-room {
-    background-color: #eee5ff;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     padding: 30px;
     gap: 20px;
     border-radius: 8px;
+    
   }
   .create-room input {
     height: 35px;
@@ -44,7 +45,7 @@
     cursor: pointer;
   }
   .chat {
-    background-color: #eee5ff;
+    background-color: #000000;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -55,7 +56,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 1rem;
-    color: black;
+    color: rgb(255, 255, 255);
   }
   #chat-window {
     /* background-color: red; */
@@ -67,6 +68,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+   
   }
   #chat-window::-webkit-scrollbar {
     display: none;
@@ -84,6 +86,7 @@
     background-color: transparent;
     padding: 2px;
     outline: none;
+    color: white;
   }
   .form button {
     width: 30px;
@@ -91,7 +94,7 @@
     margin-left: 5px;
     border: none;
     background-color: transparent;
-    color: #3924a3;
+    color: #ffffff;
   }
   
   .singlemsg {
@@ -109,7 +112,7 @@
 
   }
   .singlemsg .content {
-    background-color:rgb(136 49 179);
+    background-color:rgb(7, 57, 132);
     min-width: 40px;
     min-height: 20px;
     color: white;
@@ -151,6 +154,30 @@
   .made a:hover {
     text-decoration: underline;
   }
-  .code{
-    color: red;
+
+  .translate-btn{
+    color: black;
+    /* display: none; */
   }
+  .singlemsg{
+    position: relative;
+    margin: 0 100px ;
+  }
+  .translate-btn{
+ top: 0px;  
+  position: absolute;
+  width: fit-content;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: none;
+  }
+  .translate-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+.singlemsg .content:hover .translate-btn{
+  display: inline;
+  
+}

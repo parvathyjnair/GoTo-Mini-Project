@@ -30,6 +30,7 @@ const ShowCompanions: React.FC<{ email: string; name: string }> = ({
       }
       setData(val);
       setLoading(false);
+      
     });
   }
 
@@ -87,8 +88,9 @@ const ShowCompanions: React.FC<{ email: string; name: string }> = ({
               } ${destination} with anyone of them...`}
             />
             <div className="companion-cards-container">
-              {data
-                // Filter out the item with the current user's email
+              {
+              data
+                 // Filter out the item with the current user's email
                 .map((item) => (
                   <div className="companion-card" key={item._id}>
                     <CompanionCard
@@ -128,7 +130,7 @@ const ShowCompanions: React.FC<{ email: string; name: string }> = ({
               />
             )}
             {/* Add the "Recommend Mates" button here as well */}
-            <button className="recommend-btn">Recommend Mates</button>
+            {/* <button className="recommend-btn">Recommend Mates</button> */}
           </>
         )}
       </div>

@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
   let results = [];
 
   userDetails.forEach((user, index) => {
-    const trip = trips[index];
+    const trip = trips.find(item=>item.email===user.email)
     if (user === null
         || !isCompanion(date, time, trip.date, trip.time)
     ) return;
