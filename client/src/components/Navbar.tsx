@@ -166,9 +166,9 @@ const Navbar: React.FC<navbarProps> = ({isLogged, profile, siteName, onLogout}) 
           <SVGLogo width="28" height="48" fill="var(--accent)"/>
           
           <div className="navbar__site-name">
-            {orientation || !isLogged?"Travelbuddy":"TravelMates"}
+            {orientation || !isLogged?"Findbuddy":"TravelMate"}
             {/* GoTogether */}
-          </div>
+          </div>cd
 
         </div>
 
