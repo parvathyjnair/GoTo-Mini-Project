@@ -25,7 +25,7 @@ self.addEventListener('notificationclick', event => {
   event.notification.close();
 
   const payload = event.notification.data;
-  const url = `https://goto.webnd-iitbbs.org/showCompanions/${payload.destination}/${payload.date}/${payload.time}/${payload.dir}`;
+  const url = `http://localhost:3000/showCompanions/${payload.destination}/${payload.date}/${payload.time}/${payload.dir}`;
 
   event.waitUntil(
     clients.openWindow(url)

@@ -73,7 +73,6 @@ const ShowCompanions: React.FC<{ email: string; name: string }> = ({
               <InfoCard content="You will be notified when there are companions for you." />
             )}
             {/* Add the "Recommend Mates" button */}
-            <button className="recommend-btn">Recommend your mates?</button>
           </div>
         </>
       )}
