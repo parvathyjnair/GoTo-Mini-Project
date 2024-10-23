@@ -28,6 +28,11 @@ const CompanionCard : React.FC<companionCardProps> = ({avatar, name, time, ph, w
       dialogRef.current.close();
     }
   };
+  const maskName = (name: string) => {
+    if (name.length <= 3) return name;
+    return `${name.substring(0, 3)}${'*'.repeat(name.length - 3)}`;
+  };
+
 
   const {showToast} = useToast();
   
@@ -82,7 +87,7 @@ const CompanionCard : React.FC<companionCardProps> = ({avatar, name, time, ph, w
                   </div>
                   <div className="contact-data">
                    <button>
-                    <a href={`/chat?email=${sortString(user.email+email)}&user=${name}`}>Chat</a>
+                    <a href={`/chat?email=${sortString(user.email+email)}&user=${maskName(name)}`}>Chat</a>
 '                  </button>
                   </div>
                   </div>
@@ -102,7 +107,7 @@ const CompanionCard : React.FC<companionCardProps> = ({avatar, name, time, ph, w
                   <div className="avatar-frame">
                       <img src={avatar} alt="User Avatar" className="avatar" />
                   </div>
-                  <div className="companion-card__name">{name}</div>
+                  <div className="companion-card__name">{maskName(name)}</div>
               </div>
               <div className="right">
                   <div>{time}</div>
